@@ -1,0 +1,32 @@
+{
+  "name": "quran-english-learning",
+  "version": "1.0.0",
+  "description": "تطبيق تعليمي للأطفال يجمع بين تعليم اللغة الإنجليزية وتحفيظ القرآن الكريم",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "clean": "rimraf .next out",
+    "prebuild": "npm run clean",
+    "static": "npm run build && npm run export",
+    "android": "npm run static && npx cap sync android && npx cap open android",
+    "android:build": "node scripts/build-android.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/cli": "^7.4.2",
+    "@capacitor/core": "^7.4.2",
+    "@heroicons/react": "^2.0.18",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
+    "howler": "^2.2.3",
+    "lottie-react": "^2.4.1",
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}
